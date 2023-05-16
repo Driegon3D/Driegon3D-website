@@ -1,0 +1,509 @@
+/* default default
+-------------------------------------------------------------------------------*/
+
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}	
+
+
+article, aside, figure, footer, header, hgroup, nav, section {display: block;}
+
+/* Responsive images and other embedded objects
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites, like, say for Google Maps custom placemarkers. 
+   There has been a report of problems with standard Google maps as well, but we haven't been able to duplicate or diagnose the issue. */
+img,
+object,
+embed {max-width: 100%;}
+
+/* force a vertical scrollbar to prevent a jumpy page */
+html {overflow-y: scroll;}
+
+/* we use a lot of ULs that aren't bulleted. 
+	don't forget to restore the bullets within content. */
+ul {list-style: none;}
+
+
+blockquote, q {quotes: none;}
+
+blockquote:before, 
+blockquote:after, 
+q:before, 
+q:after {content: ''; content: none;}
+
+a {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent; text-decoration:none;}
+a:hover {text-decoration:underline;}
+
+del {text-decoration: line-through;}
+
+abbr[title], dfn[title] {border-bottom: 1px dotted #000; cursor: help;}
+
+/* tables still need cellspacing="0" in the markup */
+table {border-collapse: collapse; border-spacing: 0;}
+th {font-weight: bold; vertical-align: bottom;}
+td {font-weight: normal; vertical-align: top;}
+
+hr {display: block; height: 1px; border: 0; border-top: 1px solid #aaa; margin: 1em 0; padding: 0;}
+
+input, select {vertical-align: middle;}
+
+pre {
+	display: block;
+	padding: 9.5px;
+	margin: 0 0 10px;
+	font-size: 13px;
+	line-height: 20px;
+	word-break: break-all;
+	word-wrap: break-word;
+	white-space: pre;
+	white-space: pre-wrap;
+	white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+	background-color: #f5f5f5;
+	border: 1px solid #ccc;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+input[type="radio"] {vertical-align: text-bottom;}
+input[type="checkbox"] {vertical-align: bottom; *vertical-align: baseline;}
+.ie6 input {vertical-align: text-bottom;}
+
+select, input, textarea {font: 99% sans-serif;}
+
+table {font-size: inherit; font: 100%;}
+ 
+/* Accessible focus treatment
+	people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active {outline: none;}
+
+small {font-size: 85%;}
+
+strong, th {font-weight: bold;}
+
+td, td img {vertical-align: top;} 
+
+/* Make sure sup and sub don't screw with your line-heights
+	gist.github.com/413930 */
+sub, sup {font-size: 75%; line-height: 0; position: relative;}
+sup {top: -0.5em;}
+sub {bottom: -0.25em;}
+
+/* standardize any monospaced elements */
+pre, code, kbd, samp {font-family: monospace, sans-serif;}
+
+/* hand cursor on clickable elements */
+.clickable,
+label, 
+input[type=button], 
+input[type=submit], 
+button {cursor: pointer;}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {margin: 0;}
+
+/* make buttons play nice in IE */
+button {width: auto; overflow: visible;}
+ 
+/* scale images in IE7 more attractively */
+.ie7 img {-ms-interpolation-mode: bicubic;}
+
+/* prevent BG image flicker upon hover */
+.ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
+
+/* let's clear some floats */
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
+.clearfix:after { clear: both; }  
+.clearfix { zoom: 1; }  
+
+
+
+/* Stylings
+-------------------------------------------------------------------------------*/
+
+body {
+	color:#1b2f01;
+	font-family:"Open Sans"; font-size:14px;
+	background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100%25' width='100%25'%3E%3Cdefs%3E%3Cpattern id='doodad' width='272.51' height='236' viewBox='0 0 34.64101615137755 30' patternUnits='userSpaceOnUse' patternTransform='rotate(221)'%3E%3Crect width='100%25' height='100%25' fill='rgba(14, 97, 222,1)'/%3E%3Cpath d='M-20-20h200v200h-200M33.34 25.75L25.98 21.5L18.62 25.75L18.62 34.25L25.98 38.5L33.34 34.25zM16.02 25.75L8.66 21.5L1.3 25.75L1.3 34.25L8.66 38.5L16.02 34.25zM7.36 10.75L0 6.5L-7.36 10.75L-7.36 19.25L0 23.5L7.36 19.25zM16.02-4.25L8.66-8.5L1.3-4.25L1.3 4.25L8.66 8.5L16.02 4.25zM33.34-4.25L25.98-8.5L18.62-4.25L18.62 4.25L25.98 8.5L33.34 4.25zM42 10.75L34.64 6.5L27.28 10.75L27.28 19.25L34.64 23.5L42 19.25zM24.68 10.75L17.32 6.5L9.96 10.75L9.96 19.25L17.32 23.5L24.68 19.25z' fill='rgba(85, 171, 247,0.86)'/%3E%3Cpath d='M-20-20h200v200h-200M37.34 25.75L29.98 21.5L22.62 25.75L22.62 34.25L29.98 38.5L37.34 34.25zM20.02 25.75L12.66 21.5L5.3 25.75L5.3 34.25L12.66 38.5L20.02 34.25zM11.36 10.75L4 6.5L-3.36 10.75L-3.36 19.25L4 23.5L11.36 19.25zM20.02-4.25L12.66-8.5L5.3-4.25L5.3 4.25L12.66 8.5L20.02 4.25zM37.34-4.25L29.98-8.5L22.62-4.25L22.62 4.25L29.98 8.5L37.34 4.25zM46 10.75L38.64 6.5L31.28 10.75L31.28 19.25L38.64 23.5L46 19.25zM54.66 25.75L47.3 21.5L39.94 25.75L39.94 34.25L47.3 38.5L54.66 34.25zM28.68 40.75L21.32 36.5L13.96 40.75L13.96 49.25L21.32 53.5L28.68 49.25zM2.7 25.75L-4.66 21.5L-12.02 25.75L-12.02 34.25L-4.66 38.5L2.7 34.25zM2.7-4.25L-4.66-8.5L-12.02-4.25L-12.02 4.25L-4.66 8.5L2.7 4.25zM28.68-19.25L21.32-23.5L13.96-19.25L13.96-10.75L21.32-6.5L28.68-10.75zM54.66-4.25L47.3-8.5L39.94-4.25L39.94 4.25L47.3 8.5L54.66 4.25zM46 40.75L38.64 36.5L31.28 40.75L31.28 49.25L38.64 53.5L46 49.25zM11.36 40.75L4 36.5L-3.36 40.75L-3.36 49.25L4 53.5L11.36 49.25zM-5.96 10.75L-13.32 6.5L-20.68 10.75L-20.68 19.25L-13.32 23.5L-5.96 19.25zM11.36-19.25L4-23.5L-3.36-19.25L-3.36-10.75L4-6.5L11.36-10.75zM46-19.25L38.64-23.5L31.28-19.25L31.28-10.75L38.64-6.5L46-10.75zM63.32 10.75L55.96 6.5L48.6 10.75L48.6 19.25L55.96 23.5L63.32 19.25zM28.68 10.75L21.32 6.5L13.96 10.75L13.96 19.25L21.32 23.5L28.68 19.25z' fill='rgba(34, 45, 89,1)'/%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23doodad)' height='200%25' width='200%25'/%3E%3C/svg%3E ")
+	}
+
+#page-wrap {width:1250px; margin:0px auto; border:0px solid #000; padding:20px;}
+/*color de fondo de titulo*/
+header {background:#fff; padding:10px 20px 12px 20px; position:relative;
+-moz-box-shadow: 1px 1px 12px 2px #aaa;
+-webkit-box-shadow: 1px 1px 12px 2px #aaa;
+box-shadow:         1px 1px 12px 2px #aaa;
+border-radius:12px 12px 0px 0px;
+}
+
+header a {color: #1b2f01; text-decoration:none;}
+header a:hover {text-decoration:underline;}
+
+
+#logo{background:url('../img/Logoc.png'); width:150px; height:150px; margin:0px 20px 0px 10px;}
+#logo-title{}
+
+.newsimg {float:left; width:150px; margin:4px 12px 0px 0px;}
+
+.newsimg_large {float:left; width:300px; margin:4px 12px 0px 0px;}
+
+.libimg { border: 1px; border-style: solid; margin: 0 0.6em; }
+
+#donate {margin-top:10px;}
+#donate h4 {margin-bottom:5px; font-weight:600;}
+	
+a:hover img {
+border: none !important;
+opacity:0.8;
+}
+
+#page-content {
+	background:#343a40; /* #FFFFE5 BACKGROUND_COLOR - pale yellow/cream from colormap.cc */																					 
+	position:relative; padding:20px 20px 0px 20px;
+	-moz-box-shadow: 1px 1px 12px 2px #aaa; -webkit-box-shadow: 1px 1px 12px 2px #aaa; box-shadow: 1px 1px 12px 2px #aaa;
+	border-radius:0px 0px 12px 12px;
+}
+
+#sidebar{width:220px; padding:10px; float:left; background:#fff; border-radius:8px; border:0px solid #ddd; margin-bottom:20px;}
+
+.sticky-wrapper {float:left; padding:0px 0px 0px 0px; margin-right:20px;}
+
+#sidebar.stuck {position:fixed; top:0; margin-top:20px;}
+#sidebar div.title.top {visibility:hidden; margin-bottom:-20px; text-transform:lowercase;}
+#sidebar.stuck div.title.top {visibility:visible; margin-bottom:-3px;}
+
+/* #sidebar .current {text-decoration:underline;} */
+
+article{width:900px; float:left; margin-left:20px; padding:0px; }
+article.full{}
+
+section-area { margin-bottom:20px; display:inline-block; width:100%; border-radius:8px; padding:0px; text-align: center; border: 1px solid #6f2dbd; background:##343a40; }
+section-area.snow { color: rgba(249, 215, 44, 1); background:#444; }
+section-area.snow a { color: #ffff66; }
+section-area h1 { padding: 8px 20px 8px 20px; }
+section-area p { padding: 8px 20px 8px 20px; }
+
+section {margin-bottom:20px; background:#fff; border-radius:8px; border:0px solid #ddd; padding:10px 20px 20px 20px;}
+.subsection {margin-bottom:20px;}
+.subsection:last-child {margin-bottom:0px;}
+img.github-ribbon {float: right; position: relative; top: 0; right: 0; border: 0;}
+
+/* Custom text-selection colors (remove any text shadows: twitter.com/miketaylr/status/12228805301) */
+::-moz-selection {background: #000; color: #fff; text-shadow: none;}
+::selection {background: #000; color: #fff; text-shadow: none;} 
+
+/*	j.mp/webkit-tap-highlight-color */
+a:link {-webkit-tap-highlight-color: #1b2f01;} 
+
+a {color:#1b2f01; font-weight:600;}
+
+.imgLink:hover{opacity:0.8;}
+
+ins {background-color: #fcd700; color: #1b2f01; text-decoration: none;}
+mark {background-color: #fcd700; color: #1b2f01; font-style: italic; font-weight: bold;}
+
+.green{color:#518e04;}
+
+p {padding:0px 0px 5px 0px; line-height:160%;}
+
+.entry p {padding:0px 0px 15px 0px; line-height:160%;}
+
+section ul li{padding-left:10px;}
+
+small {font-size:11px;}
+
+dt {font-weight: bold;}
+
+button {padding:5px 5px 10px 5px; margin-bottom:10px;}
+button.left {margin-right:5px;}
+button.last {clear:both;}
+
+h1 a, h2 a, h3 a, h4 a, h5 a{text-decoration:none;}
+
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover{text-decoration:underline;}
+
+h1 {font-size:18px; line-height:150%; padding-bottom:10px;}
+h2 {font-size:15px; line-height:150%; padding-bottom:5px;}
+h3 {font-size:13px; line-height:150%; padding-bottom:2px}
+h4 {font-size:12px; line-height:150%; padding-bottom:2px;}
+h5 {font-size:11px; line-height:150%; padding-bottom:2px;}
+
+
+header h1 {font-size:28px; margin:0px; padding:0px; font-weight:600; line-height:140%;}
+header h2 {font-size:20px; margin:0px; padding:0px; font-weight:600; line-height:100%;}
+header h3 {font-size:16px; margin:0px; padding:0px; font-weight:600; line-height:100%;}
+header h4 {font-size:12px; margin:0px; padding:0px; font-weight:500; line-height:100%;}
+
+/* colour the header 'Open' & 'SCAD' and make bolder and chunky
+like the cornfield default scheme from colormap.cc
+Open - #9dcb51;} OPENCSG_FACE_BACK_COLOR - green
+SCAD - #6f2dbd;} OPENCSG_FACE_FRONT_COLOR - yellow
+ - for reference #FFFFE5;} BACKGROUND_COLOR - pale yellow/cream, used above 
+*/
+header h1.title {color:#4cc9f0; font-size:50px; letter-spacing:-1px; font-weight:700;}
+header h1 span.green {color:#7209b7; letter-spacing:0px;}
+
+header h2.subtitle {color:black; letter-spacing:-1px;}
+
+/* colour OPEN & SCAD in the home sub-page heading the same*/
+section h1 strong {color:#4cc9f0; font-weight:700; letter-spacing:-1px;}
+section h1 strong span.green {color:#7209b7; letter-spacing:0px;}
+
+.clear {clear:both;}
+.left {float:left;}
+.right {float:right;}
+
+.inline {display:inline;}
+.block {display:block;}
+
+.align-left {text-align:left;}
+.align-right {text-align:right;}
+.justify {text-align:justify;}
+
+.normal {font-weight:normal;}
+
+ol{
+	list-style-position: inside; padding-bottom:20px;
+}
+ul{
+	list-style-position: inside; padding-bottom:10px;
+}
+
+strong {font-weight:600;}
+
+ul a{text-decoration:none;}
+ul a:hover{text-decoration:underline;}
+
+ul.bullet {list-style-type:disc; list-style-position:inside;}
+ul.indent {padding-left:20px;}
+ul.bullet li{line-height:200%;}
+
+.book-desc > ul li { list-style-type:circle; }
+.book-data > ul { padding-top: 1em; }
+.book-data > ul li { padding-left: 0pt; }
+.book-data > ul li:before { content: "\00bb"; margin-right: 0.4em; }
+
+li{line-height:180%;}
+
+#navigation {text-align:right; margin-top:35px;}
+
+#navigation-inner {
+	margin-left: 0px;
+	display:inline;
+}
+
+#navigation ul {
+	position: relative;
+	list-style: none;
+	display:inline;
+}
+
+.nav-divider{
+	padding:0px 10px;
+}
+
+#navigation ul li {
+	display:inline;
+	position: relative;
+	line-height:100%;
+	letter-spacing:0px;
+	font-size:14px;
+	font-weight:500;
+	padding:4px 10px 5px 10px;
+	margin:0px 3px;
+}
+
+#navigation ul li:last-child {
+	//padding:0px;
+}
+
+#navigation ul li.current {border-radius:8px; background:#f2f2ee; border:0px solid #ddd; padding:3px 9px 4px 9px;}
+
+#navigation ul li:last-child .nav-divider {
+	display:none;
+}
+
+#navigation ul li a {
+	text-transform:lowercase;
+}
+
+/* Navbar Hover Links */
+
+#navigation ul li:hover	{
+}
+
+
+#navigation ul li a:hover {
+	position: relative;
+	text-decoration: underline;
+}
+
+#navigation ul li:hover li a {
+
+}
+
+/* Navbar Active Links */
+
+#navigation ul li.active a {
+/*	border-bottom: 1px solid #333; */
+
+}
+
+#cults-ico {position:absolute; background:url('../img/cultsico.ico'); height:50px; width:50px;}
+
+#home-download {text-align:center; position:relative; margin-top:0px; height:130px; left:150px; width:355px;}
+
+#home-download-link {position:absolute; top:10px; background:#ffff66; height:55px; width:350px; border-radius:12px; border:4px solid #233d00;}
+
+#home-download-logo {position:absolute; background:url('../img/Logoc.png'); height:106px; width:101px;}
+
+.underline {text-decoration:underline;}
+
+a.underline:hover {text-decoration:none;}
+
+a:hover #home-download-link{
+	opacity:0.8;
+}
+
+a:active #home-download-link{
+	top:11px; left:1px;
+}
+
+.store-button {text-align:center; display:inline-block; padding:8px;}
+.download-button {background:#ffff66; border-radius:12px; border:4px solid #233d00; text-align:center; display:inline-block; padding:8px; margin:8px;}
+
+.link-grid { display: grid; width:100%; grid-column-gap: 8px; grid-auto-columns: auto; grid-auto-flow: column;}
+.link-button { height:100%; display: block; background:#ffff66; border-radius:8px; border:0px solid #6f2dbd; text-align:center; padding: 2px 8px; margin:0px;}
+.link-button h1 { margin: 0px; padding: 0px; }
+.link-button i { color: rgba(0, 0, 0, 0.4); font-size: 3em; margin: 0.2em; }
+.link-button .selected { color: rgba(0, 0, 0, 0.6); }
+
+.tutorial-links {width:640px; height:200px; border-top:1px solid #ddd; padding:30px 0px 40px 0px; }
+
+.tutorial-links:hover {opacity:0.8;}
+.tutorial-links img {border:0px solid #ddd; border-radius:8px;}
+.tutorial-links iframe {border:0px solid #ddd; border-radius:8px;}
+.tutorial-links .img-container {float:left; width:320px; margin-right:20px;}
+.tutorial-links .img-title {float:left; width:300px; font-size: 50%; font-weight: normal; font-family: sans-serif; }
+.tutorial-links .text-container {float:left; width:300px;}
+.tutorial-links h2 {margin: 0px; padding: 0px;}
+.tutorial-links ul {margin: 0px; padding: 16px;}
+
+.tutorial-links.multi:hover {opacity:1;}
+
+.gallery-links {float:left; width:140px; height:170px; padding:30px 20px 20px 0px; }
+.gallery-links a:hover {opacity:0.8;}
+.gallery-links img {border:0px solid #ddd; border-radius:8px;}
+.gallery-links iframe {border:0px solid #ddd; border-radius:8px;}
+.gallery-links .img-container {float:left; width:140px; margin-right:20px;}
+.gallery-links .text-container {float:left; width:140px;}
+
+
+footer {clear:both;}
+
+span.link {cursor:pointer;}
+span.link:hover {text-decoration:underline;}
+.tutorial-links .current {text-decoration:underline;}
+
+
+/* Print styles!
+-------------------------------------------------------------------------------*/
+@media print {
+
+}
+
+/* Media queries!
+-------------------------------------------------------------------------------*/
+
+/* Consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
+@media screen and (max-device-width: 480px) {
+			
+}
+
+@media all and (orientation: portrait) {
+	
+}
+
+@media all and (orientation: landscape) {
+	
+}
+
+/* Social media icons */
+ 
+i.fab {
+	width: 30px;
+	height: 30px;
+	font-size: 25px;
+	text-align: center;
+	padding-top: 5%;
+}
+
+.fa-twitter {
+	color:#00aced
+}
+
+.fa-youtube {
+	color:#ff0000
+}
+
+.fa-facebook {
+	color:#0c87ef
+}
+
+.fa-instagram {
+	color:#fc019e
+}
+
+
+.ticker-wrap, .ticker-item {
+	height: 2.5rem;
+	line-height: 1.2rem;
+}
+
+.ticker-wrap {
+	overflow: hidden;
+	margin: 0.1rem;
+}
+
+.ticker-item {
+	display: flex;
+}
+
+.ticker-content {
+	text-align: center;
+	margin: auto;
+}
+
+.ticker-animation {
+	position: relative;
+	animation-name: ticker;
+	animation-duration: 40s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-out;
+}
+
+.ticker-move:hover {
+	animation-play-state: paused;
+}
+
+@keyframes ticker {
+    0% { transform:translate(0, 0.0rem); }
+    15% { transform:translate(0, 0.0rem); }
+    16% { transform:translate(0, -2.5rem); }
+    32% { transform:translate(0, -2.5rem); }
+    33% { transform:translate(0, -5.0rem); }
+    49% { transform:translate(0, -5.0rem); }
+    50% { transform:translate(0, -7.5rem); }
+    65% { transform:translate(0, -7.5rem); }
+    66% { transform:translate(0, -10.0rem); }
+    82% { transform:translate(0, -10.0rem); }
+    83% { transform:translate(0, -12.5rem); }
+    99% { transform:translate(0, -12.5rem); }
+    100% { transform:translate(0, -15.0rem); }
+}
